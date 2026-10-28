@@ -78,7 +78,7 @@ header nav a {
 /* De inhoud van de pagina */
 main {
     padding: 20px;
-    padding-bottom: 70px;
+    padding-bottom: 135px;
 }
 
 main h2 {
@@ -211,12 +211,6 @@ main section {
     cursor: pointer;
 }
 
-
-/* Carousel: horizontaal swipen */
-
-
-
-
 /* De rij waarin de kaarten staan */
 .cards {
     display: flex;
@@ -229,6 +223,7 @@ main section {
     scroll-padding-inline: 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    padding-top: 30px;
 }
 
 .cards::-webkit-scrollbar {
@@ -242,7 +237,7 @@ main section {
     min-width: 0;
     height: 290px;
     box-sizing: border-box;
-    overflow-y: auto;
+    
     background-color: white;
     border-radius: 20px;
     padding: 25px;
@@ -272,13 +267,6 @@ main section {
     color: #494949;
 }
 
-
-
-
-
-
-
-
 /* De naam en knoppen bovenaan de kaart */
 .top {
     display: flex;
@@ -301,7 +289,6 @@ main section {
     background-color: white;
 }
 
-
 /* De swipe-indicatie onder de kaarten */
 .swipe {
     display: flex;
@@ -312,6 +299,7 @@ main section {
     color: #777777;
     font-size: 14px;
     margin: 16px 0 28px;
+    margin-bottom: -40px;
 }
 
 .swipe svg {
@@ -334,7 +322,6 @@ footer {
     padding: 12px 0;
 }
 
-
 /* De icoontjes onderaan */
 footer a {
     display: flex;
@@ -347,15 +334,13 @@ footer svg {
     height: 40px;
 }
 
-
 .bookmarked {
     margin-top: 35px;
 }
 
 .bookmarked h2 {
-    font-size: 22px;
+    font-size: 18px;
 }
-
 
 /* Header: logo en hamburgermenu */
 header > svg,
@@ -367,7 +352,7 @@ header > img {
     flex-shrink: 0;
 }
 
-.divider {
+.divider-one {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -375,6 +360,18 @@ header > img {
     margin: 25px auto;
     width: 90%;
     margin-top: 35px;
+    margin-bottom: 8px;
+}
+
+.divider-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin: 25px auto;
+    width: 90%;
+    margin-top: 55px;
+    margin-bottom: -20px;
 }
 
 .divider span {
@@ -428,7 +425,6 @@ header > img {
     object-fit: cover;
     border-radius: 40px;
 }
-
 
 /* Medische gegevens in de kaarten */
 .details {
@@ -494,7 +490,6 @@ main {
     min-width: 0;
 }
 
-
 /* Webinar-kaart */
 .webinar-card {
     display: flex;
@@ -522,23 +517,41 @@ main {
 
 /* Datum en dag */
 .webinar-card .event-details > div:first-child {
-    background-color: #f2f2f2;
     border-radius: 10px;
-    padding: 8px 4px;
+    padding: 15px 15px;
+    width: 75px;
+    height: 70px;
     text-align: center;
+    background: linear-gradient(#f2f2f2 60%, #cdede9 40%)
+}
+
+.webinar-card .event-details > div:first-child p {
+    font-weight: bold;
+    position: relative;
+    top: 8px;
+    font-size: 13px;
+    margin-left: 2px;
+}
+
+.webinar-card .event-details > div:first-child strong {
+    font-size: 20px;
+    position: relative;
+    bottom: 4px;
+    right: 1px;
 }
 
 /* Alle informatie bij de datum */
 .webinar-card .event-details p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.4;
-    margin: 0 0 6px;
+    margin: 0 0 3px;
     overflow-wrap: break-word;
+    margin-left: -10px;
 }
 
 /* Webinar-titel */
 .webinar-card h4 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.35;
     margin: 4px 0 0;
     overflow-wrap: break-word;
@@ -546,7 +559,7 @@ main {
 
 /* Deelnemers */
 .webinar-card > p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.4;
     margin: 4px 0 0;
 }
@@ -561,7 +574,6 @@ main {
     flex-wrap: wrap;
     gap: 8px;
 }
-
 
 /* Noor Becker - vraagkaart */
 .question-card {
@@ -597,7 +609,6 @@ main {
     margin: 8px 0 0;
     overflow-wrap: break-word;
     font-weight: bold;
-    
 }
 
 /* Aantal reacties */
@@ -626,12 +637,12 @@ main {
     color: #494949;
 }
 
-
 /* Elise Thompson - profielkaart */
 .profile-card {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-top: 20px;
 }
 
 /* Profielfoto, naam en knoppen */
@@ -714,7 +725,6 @@ main {
     margin-top: 8px;
 }
 
-
 /* Daniel Kim - quote kaart */
 .quote-card {
     display: flex;
@@ -740,7 +750,6 @@ main {
     color: #494949;
 }
 
-
 .quote-card blockquote {
     font-size: 16px;
     font-style: normal;
@@ -756,7 +765,6 @@ main {
     margin-top: -5px;
     line-height: 1.2;
 }
-
 
 .quote-card .details {
     display: flex;
@@ -782,8 +790,6 @@ main {
     line-height: 1.4;
     margin: 0;
 }
-
-
 
 /* Elise: foto en informatie */
 
@@ -820,6 +826,92 @@ main {
     font-size: 15px;
     color: #494949;
 }
+
+/* Labels van Anthony */
+.anthony-card {
+    position: relative;
+    margin-top: 20px;
+}
+
+.anthony-card .card-labels {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    z-index: 2;
+}
+
+.anthony-card .label-project,
+.anthony-card .label-internship {
+    padding: 10px 14px;
+    border-radius: 13px 13px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.anthony-card .label-project {
+    background-color: #E68EC5;
+    color: #000000;
+}
+
+.anthony-card .label-internship {
+    background-color: #EFB4D9;
+    color: #000000;
+}
+
+/* Question card labels */
+
+.question-card {
+    position: relative;
+    margin-top: 20px;
+}
+
+.question-card .card-labels {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    z-index: 2;
+}
+
+.question-card .label-open-question {
+    padding: 10px 14px;
+    border-radius: 13px 13px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #66B3DF;
+    color: #000000;
+}
+
+/* Webinar card labels */
+
+.webinar-card {
+    position: relative;
+    margin-top: 20px;
+}
+
+.webinar-card .card-labels {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    z-index: 2;
+}
+
+.webinar-card .label-webinar {
+    padding: 10px 14px;
+    border-radius: 13px 13px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #66C7B4;
+    color: #000000;
+}
+
 
 
 
