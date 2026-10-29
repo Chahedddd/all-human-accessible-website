@@ -320,6 +320,7 @@ footer {
     align-items: center;
     height: 75px;
     padding: 12px 0;
+    z-index: 1001;
 }
 
 /* De icoontjes onderaan */
@@ -910,6 +911,50 @@ main {
     line-height: 20px;
     background-color: #66C7B4;
     color: #000000;
+}
+
+#anthony-popup {
+    display: none;
+}
+
+.anthony-popup {
+    display: none;
+}
+
+.anthony-card {
+    cursor: pointer;
+    position: relative;
+}
+
+#anthony-popup:checked ~ .anthony-popup {
+    display: block;
+    position: fixed;
+    inset: 15% 0 0;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.close-popup {
+    display: block;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+.card-click-area {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card-actions,
+.anthony-card .pill {
+    position: relative;
+    z-index: 2;
 }
 
 
